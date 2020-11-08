@@ -1,0 +1,23 @@
+\chapter{Definizioni}\label{ch:chapter1}
+Andiamo a introdurre i concetti basilari su cui si basa il mio elaborato e che ci servià successivamente per apprezzarne l'utilità. (DA RIVEDERE)
+\section{Continual Learning}
+Negli ultimi anni, i modelli del Machine Learning sono stati addirittura in grado di sorpassare l'intelletto umano per svariati tasks, come ad esempio il \textbf{Visual Recognition}.
+Sebbene questi risultati siano sorprendenti, sono stati ottenuti con modelli statici non in grado di espandere il loro comportamneto o adattarlo nel tempo. Si introduce quindi il concetto del \textbf{Continual Learning} su cui si basa questo elaborato.\newline
+Continual Learning mira a creare algoritmi di machine learning in grado di accumulare un insieme di conoscenze apprese sequenzialmente. L'idea generale alla base dell'apprendimento continuo è rendere gli algoritmi in grado di apprendere da una fonte di dati reale. In un ambiente naturale, le opportunità di apprendimento non sono disponibili contemporaneamente e devono essere elaborate in sequenza
+Il \textbf{Continual Learning} studia il problema dell'apprendimento da uno stream infinito di dati, con l'obbiettivo di estendere gradualmente la conoscenza e di usarla per allenamenti successivi. La dimensione dello stream di dati ed il numero di tasks su cui si lavora non è necessariamente noto a priori. \textbf{Continual Learning} può essere anche definito come \textbf{Lifelong Learning}, \textbf{Sequential Learning} o \textbf{Incremental Learning}.
+Il concetto fondamentale su cui si basa \textbf{Continual Learning} è la natura sequenziale del processo di apprendimento, in cui solo una porzione dei dati di input di uno o più task è disponibile in quell'istante di tempo.
+\section{Catastrophic Forgetting}
+Una rete neurale dimentica quando le sue prestazioni su una distribuzione dati vengono ridotte dall'apprendimento su un'altra.
+La sfida maggiore del \textbf{Continual Learning} consiste nell'apprendere evitando il  \textbf{Catastrophic Forgetting}, cioè la performance di previsione su dati appartenenti a tasks precedentemente visionati nel training non dovrebbe calare nel tempo in seguito all'aggiunta di nuovi tasks.
+Definiamo adesso il \textbf{Catastriphic Forgetting}, noto anche come \textbf{Catastrophic Interference}, come la tendenza di una rete neurale artificiale a dimenticare completamente e in modo improvviso le informazioni apprese in precedenza dopo aver appreso nuove informazioni(DA WIKIPEDIA).
+\section{Stability-Plasticity Dilemma}
+Per sopperire al \textbf{Catastrophic forgetting}, i sistemi di apprendimento devono, da una parte , mostrare la capacità di acquisire nuova conoscenza e affinare quella già esistente sulla base di un input continuativo, dall'altra, impedire alla nuova informazione di interferire con la conoscenza pregressa.
+Il concetto  per il quale un sistema sia in grado di essere "\textit{plastico}" per l'integrazione di nuove informazioni e "\textit{stabile}"
+in modo da non interferire catostroficamente con la conoscenza precedentemete consolidata è definito con il nome \textbf{Stability-Plasticity Dilemma}.\newline
+Troppa "plasticità" farà sì che i dati precedentemente codificati vengano costantemente dimenticati, mentre troppa "stabilità" impedirà la codifica efficiente di questi dati a livello delle sinapsi.
+\section{Task Agnostic-Task Aware}
+Un concetto importante su cui si basa l'esecuzione del mio programma che simula il \textbf{Continual Learning} è la dualità di approccio \textbf{Task-Agnostic/Task-Aware}.
+Definiamo un approccio \textbf{Task-Agnostic} quando la rete non conosce bene i limiti dei task, cioè non conosciamo a quale task appartenga la label del dato in input alla \textbf{Rete Neurale Convoluzionale}. Mentre, nell'altro caso, l'approccio  \textbf{Task-Agnostic} è contraddistinto dalla nozione del task corrente del dato di input.\newline
+Questi due approcci ci consentono di ottenere risultati diversi sotto l'aspetto dell'accuracy della rete, sia durante che al termine del ciclo previsto per vedere tutti i tasks. In particolar modo noi possiamo avere per entrambi sia il processo di \textbf{Training}, che quello \textbf{Testing}, ottenendo sostanzialmente quattro combinazioni di possibili processi.\newline
+Vedremo successivamente come sarà possibile simulare queste due tipologie di training/testing traite il metodo \textit{set\_tasks} della classe che Rappresenta la 
+\textbf{Rete neurale Convoluzionale}.
