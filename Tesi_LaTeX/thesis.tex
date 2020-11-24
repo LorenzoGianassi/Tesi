@@ -11,6 +11,8 @@
 \usepackage{framed}
 \usepackage{rotating}
 \usepackage{cite}
+\usepackage{url}
+\usepackage{hyperref}
 
 % Packages -----------------------------------------------------------------------
 %\usepackage{amsthm}
@@ -48,12 +50,12 @@
 % Fuzz ---------------------------------------------------------------------------
 %\hfuzz10cm %Non scassare linee che escono dal bordo
 % Frontespizio -------------------------------------------------------------------
-       \title{insert title\ldots}
-       \author{insert candidate\ldots}
+       \title{Continual Learning : Visual Recognition per Problemi con Task Incrementali}
+       \author{Lorenzo Gianassi}
        \titolocorso{Ingegneria Informatica}
-       \chair{Prof. ... \\ }
+       \chair{Andrew D. Bagdanov}
        \numberofmembers{1} %numero dei relatori
-       \degreeyear{insert degree year\ldots}
+       \degreeyear{2019/2020}
        \numerocorrelatori{2} %numero dei correlatori
        \correlatori{insert correlators\ldots} % i correlatori separati da \\
 
@@ -105,13 +107,16 @@
 
 \mainmatter
 \include{files/chapter1}
-% \include{files/chapter2}
+\include{files/chapter2}
+\include{files/chapter3}
 \include{files/conclusions}
 
 \addcontentsline{toc}{chapter}{Bibliografia}
-\bibliographystyle{plain}
-\bibliography{files/biblio}
 \bibliographystyle{unsrt}
+\bibliography{files/biblio}
+%\bibliography{sp,xml}
+%\bibliographystyle{ieeetr}
 %\bibliography{sp,xml}
 
 \end{document} 
+

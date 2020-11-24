@@ -209,12 +209,6 @@
       {\@othermembers}
     \fi
   \vspace{5mm}\par
-  \ifnum \@numerocorrelatori > 1
-    {\it Correlatori}\newline
-  \else
-    {\it Correlatore}\newline
-  \fi
-    {\@correlatori}
  \end{minipage}%
  \hfil\vfil}%
 
